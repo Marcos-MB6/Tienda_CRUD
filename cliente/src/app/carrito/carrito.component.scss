@@ -1,0 +1,43 @@
+.orders-container {
+  font-family: sans-serif;
+  padding: 2rem;
+  color: #333333;
+
+  .grid-layout {
+    display: flex;
+    justify-content: center; /* Mantiene la tabla al 65% centrada en la pantalla */
+    width: 100%;
+  }
+
+  /* Estilos específicos para la tabla anidada (Master-Detail) */
+  .detail-container {
+    padding: 1.5rem;
+    background-color: #f5f7f8; /* Un gris azulado muy claro para diferenciarlo visualmente */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin: 0.5rem;
+  }
+
+  /* Reutilización de estilos de los botones para consistencia en toda la app */
+  .action-btn-primary {
+    background-color: #1976d2 !important; 
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+
+    &:hover {
+      background-color: #1565c0 !important;
+    }
+  }
+
+  .action-btn-danger {
+    background-color: #d32f2f !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+
+    &:hover {
+      background-color: #c62828 !important;
+    }
+  }
+}

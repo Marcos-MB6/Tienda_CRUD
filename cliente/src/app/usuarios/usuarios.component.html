@@ -1,0 +1,27 @@
+<div class="store-container">
+    <h2 class="store-title">Lista de Usuarios</h2>
+
+    <div class="grid-layout">
+        <dx-data-grid id="dataGridUsuarios" [dataSource]="datosListaUsuarios" [showBorders]="true" [width]="'65%'">
+
+            <dxo-toolbar>
+                <dxi-item name="groupPanel"></dxi-item>
+                <dxi-item location="after">
+                    <dx-button class="action-btn-primary" [text]="'Registrar usuario'" routerLink="/register" routerLinkActive="active">
+                    </dx-button>
+                </dxi-item>
+                <dxi-item location="after">
+                    <dx-button class="action-btn-danger" [text]="'Eliminar'" (onClick)="this.delete()">
+                    </dx-button>
+                </dxi-item>
+            </dxo-toolbar>
+
+            <dxo-selection mode="single" [allowSelectAll]="true">
+            </dxo-selection>
+
+            <dxi-column dataField="id" caption="Usuario Id" sortOrder="asc" [visible]="false"></dxi-column>
+            <dxi-column dataField="username" caption="Nombre de Usuario" [allowSorting]="false"></dxi-column>
+
+        </dx-data-grid>
+    </div>
+</div>

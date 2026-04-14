@@ -1,0 +1,15 @@
+<div class="register-wrapper">
+    <div class="register-card" *ngIf="!registroHecho">
+        <h2>Crear Cuenta</h2>
+
+        <form class="navbar-login" (ngSubmit)="register()" #loginForm="ngForm">
+            <input name="username" type="text" placeholder="Username" autocomplete="none" [(ngModel)]="model.username">
+            <input name="password" type="password" placeholder="Password" [(ngModel)]="model.password">
+            <button type="submit">Registrarme</button>
+        </form>
+    </div>
+
+    <div class="register-card" *ngIf="registroHecho">
+        <h2>Enhorabuena te has registrado!</h2>
+    </div>
+</div>

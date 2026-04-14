@@ -1,0 +1,54 @@
+.store-container {
+  font-family: sans-serif;
+  padding: 2rem;
+  color: #333333;
+
+  .store-title {
+    text-align: center;
+    color: #455a64; /* Mismo color de texto que los enlaces del nav */
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .grid-layout {
+    display: flex;
+    justify-content: center; /* Centra el dx-data-grid que tiene el width al 65% */
+    width: 100%;
+
+    /* Estilos para la plantilla de la imagen */
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .product-img {
+        border-radius: 4px; /* Bordes ligeramente redondeados */
+        object-fit: cover;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra para dar profundidad */
+      }
+    }
+  }
+
+  /* Sobrescribiendo estilos base para los botones de DevExtreme */
+  .action-btn-primary {
+    background-color: #1976d2 !important; /* Mismo azul que el botón de login */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+
+    &:hover {
+      background-color: #1565c0 !important;
+    }
+  }
+
+  .action-btn-danger {
+    background-color: #d32f2f !important; /* Rojo elegante para acciones destructivas */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+
+    &:hover {
+      background-color: #c62828 !important;
+    }
+  }
+}

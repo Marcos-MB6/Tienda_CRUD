@@ -1,0 +1,77 @@
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+
+
+<!-- <h2>Lista de Productos de la tienda de Marcos</h2>
+
+    <div class="grid-layout">
+        <dx-data-grid id="dataGridProductos" [dataSource]="datosProductos" [showBorders]="true" [width]="'65%'">
+
+
+            <dxo-toolbar>
+                <dxi-item name="groupPanel"></dxi-item>
+                <dxi-item location="after">
+                    <dx-button [text]="'Nuevo/Editar'" (onClick)="this.openDialog()">
+                    </dx-button>
+                </dxi-item>
+                <dxi-item location="after">
+                    <dx-button [text]="'Eliminar'" (onClick)="this.delete()">
+                    </dx-button>
+                </dxi-item>
+            </dxo-toolbar>
+
+            <dxo-selection mode="single" [allowSelectAll]="true">
+            </dxo-selection>
+
+            <dxi-column dataField="id" caption="Producto Id" sortOrder="asc" [visible]="false"></dxi-column>
+            <dxi-column dataField="imagen" caption="Imagen" cellTemplate="cellTemplate"></dxi-column>
+            <dxi-column dataField="nombre" caption="Nombre" [allowSorting]="false"></dxi-column>
+            <dxi-column dataField="precio" caption="Precio" [allowSorting]="false"></dxi-column>
+            <dxi-column dataField="marca" caption="Marca" [allowSorting]="false"></dxi-column>
+            <dxi-column dataField="tipo" caption="Tipo" [allowSorting]="false"></dxi-column>
+
+
+            <div *dxTemplate="let data of 'cellTemplate'">
+                <img [src]="data.value" width="120px" />
+            </div>
+
+        </dx-data-grid>
+    </div> -->
+
+<!-- <dx-data-grid id="dataGridVentasCabecera" [dataSource]="datosPedidos" [showBorders]="true" [width]="'65%'">
+
+
+        <dxo-toolbar>
+            <dxi-item name="groupPanel"></dxi-item>
+            <dxi-item location="after">
+                <dx-button [text]="'Hacer un pedido'" (onClick)="this.openDialogVentas()">
+                </dx-button>
+            </dxi-item>
+            <dxi-item location="after">
+                <dx-button [text]="'Eliminar'" (onClick)="this.deletePedido()">
+                </dx-button>
+            </dxi-item>
+        </dxo-toolbar>
+
+        <dxo-selection mode="single" [allowSelectAll]="true">
+        </dxo-selection>
+
+        <dxi-column dataField="id" caption="Id del pedido" [allowSorting]="false"></dxi-column>
+
+
+        <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+        <div *dxTemplate="let productos of 'detail'">
+            <dx-data-grid [dataSource]="productos.data.ventas">
+
+                <dxi-column dataField="producto.nombre" caption="Nombre" [allowSorting]="false"></dxi-column>
+                <dxi-column dataField="producto.precio" caption="Precio" [allowSorting]="false"></dxi-column>
+                <dxi-column dataField="producto.marca" caption="Marca" [allowSorting]="false"></dxi-column>
+                <dxi-column dataField="producto.tipo" caption="Tipo" [allowSorting]="false"></dxi-column>
+
+            </dx-data-grid>
+        </div>
+
+
+        <dxi-column dataField="precioTotal" caption="Precio Total" [allowSorting]="false"></dxi-column>
+
+    </dx-data-grid> -->

@@ -1,0 +1,33 @@
+<form [formGroup]="registerForm">
+  <div class="modal-producto">
+    <h2>Hacer pedido</h2>
+
+    <div formArrayName="productosCarrito">
+      <div *ngFor="let compra of productosCarrito.controls; let i = index" [formGroupName]="i" class="fila-inputs">
+
+        <div class="grupo-input">
+          <label>Producto</label>
+          <select formControlName="producto">
+            <option *ngFor="let producto of listaProductos" [value]="producto.id">
+              {{ producto.nombre }}
+            </option>
+          </select>
+        </div>
+
+        <div class="grupo-input cantidad">
+          <label>Cantidad:</label>
+          <input type="number" formControlName="cantidad">
+        </div>
+
+        <button (click)="eliminarProducto(i)">−</button>
+      </div>
+    </div>
+
+    <button (click)="agregarProducto()">+ Añadir Producto</button>
+
+    <div class="acciones">
+      <button class="btn-cancelar" (click)="cancelar()">Cancelar</button>
+      <button class="btn-guardar" (click)="cerrar()">Comprar</button>
+    </div>
+  </div>
+</form>

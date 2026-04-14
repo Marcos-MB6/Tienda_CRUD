@@ -1,0 +1,80 @@
+.register-wrapper {
+    /* Centrado absoluto en la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    /* Ocupa la mayor parte de la altura de la pantalla */
+    background-color: #f5f7f8;
+    /* Fondo gris muy suave para que el recuadro blanco resalte */
+    font-family: sans-serif;
+    padding: 1rem;
+    /* Margen de seguridad para pantallas pequeñas */
+
+    .register-card {
+        background-color: #ffffff;
+        padding: 2.5rem 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* Efecto de recuadro elevado/sombra sutil */
+        width: 100%;
+        max-width: 400px;
+        /* Evita que el formulario sea gigante en monitores grandes */
+        text-align: center;
+
+        h2 {
+            color: #455a64;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Sobrescribimos el comportamiento de 'navbar-login' para formato columna */
+        .navbar-login {
+            display: flex;
+            flex-direction: column;
+            /* Apila los elementos verticalmente */
+            gap: 1rem;
+
+            input {
+                padding: 0.75rem;
+                /* Un poco más de altura para escribir cómodamente */
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                color: #333333;
+                outline: none;
+                font-size: 1rem;
+                width: 100%;
+                /* Ocupan todo el ancho del recuadro */
+                box-sizing: border-box;
+                /* Asegura que el padding no rompa el ancho */
+
+                &:focus {
+                    border-color: #1976d2;
+                    /* Mantenemos el azul corporativo */
+                }
+            }
+
+            button {
+                padding: 0.75rem;
+                background-color: #1976d2;
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1rem;
+                margin-top: 0.5rem;
+                width: 100%;
+
+                &:hover {
+                    background-color: #1565c0;
+                }
+
+                &:active {
+                    background-color: #0d47a1;
+                }
+            }
+        }
+    }
+}

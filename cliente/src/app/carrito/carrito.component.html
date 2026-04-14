@@ -1,0 +1,38 @@
+<div class="orders-container">
+    <div class="grid-layout">
+        <dx-data-grid id="dataGridVentasCabecera" [dataSource]="datosPedidos" [showBorders]="true" [width]="'65%'">
+
+            <dxo-toolbar>
+                <dxi-item name="groupPanel"></dxi-item>
+                <dxi-item location="after">
+                    <dx-button class="action-btn-primary" [text]="'Hacer un pedido'"
+                        (onClick)="this.openDialogVentas()">
+                    </dx-button>
+                </dxi-item>
+                <dxi-item location="after">
+                    <dx-button class="action-btn-danger" [text]="'Eliminar'" (onClick)="this.deletePedido()">
+                    </dx-button>
+                </dxi-item>
+            </dxo-toolbar>
+
+            <dxo-selection mode="single" [allowSelectAll]="true">
+            </dxo-selection>
+
+            <dxi-column dataField="id" caption="Id del pedido" [allowSorting]="false"></dxi-column>
+
+            <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+
+            <div *dxTemplate="let productos of 'detail'" class="detail-container">
+                <dx-data-grid [dataSource]="productos.data.ventas" [showBorders]="true">
+                    <dxi-column dataField="producto.nombre" caption="Nombre" [allowSorting]="false"></dxi-column>
+                    <dxi-column dataField="producto.precio" caption="Precio" [allowSorting]="false"></dxi-column>
+                    <dxi-column dataField="cantidad" caption="Cantidad" [allowSorting]="false"></dxi-column>
+                    <dxi-column dataField="dineroTotal" caption="Total" [allowSorting]="false"></dxi-column>
+                </dx-data-grid>
+            </div>
+
+            <dxi-column dataField="precioTotal" caption="Precio Total" [allowSorting]="false"></dxi-column>
+
+        </dx-data-grid>
+    </div>
+</div>

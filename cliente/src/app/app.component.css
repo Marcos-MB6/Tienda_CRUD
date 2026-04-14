@@ -1,0 +1,36 @@
+.contenedor-tienda {
+  padding: 24px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+}
+.contenedor-tienda h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #3f51b5;
+  display: inline-block;
+}
+.contenedor-tienda .grid-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.contenedor-tienda .grid-layout dx-data-grid {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.contenedor-tienda .grid-layout dx-data-grid:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+::ng-deep .dx-toolbar {
+  padding: 10px 15px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}/*# sourceMappingURL=app.component.css.map */

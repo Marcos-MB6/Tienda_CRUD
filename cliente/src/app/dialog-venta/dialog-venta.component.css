@@ -1,0 +1,64 @@
+.modal-producto {
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  padding: 10px;
+}
+.modal-producto h2 {
+  margin-top: 0;
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.modal-producto .campo-formulario {
+  margin-bottom: 16px;
+}
+.modal-producto .campo-formulario label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 6px;
+}
+.modal-producto .campo-formulario input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.modal-producto .campo-formulario input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+.modal-producto .acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+.modal-producto .acciones button {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.modal-producto .acciones button.btn-cancelar {
+  background-color: transparent;
+  color: #666;
+}
+.modal-producto .acciones button.btn-cancelar:hover {
+  background-color: #f0f0f0;
+}
+.modal-producto .acciones button.btn-guardar {
+  background-color: #3f51b5;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.modal-producto .acciones button.btn-guardar:hover {
+  background-color: rgb(49.8319672131, 64.0696721311, 143.1680327869);
+}/*# sourceMappingURL=dialog-venta.component.css.map */

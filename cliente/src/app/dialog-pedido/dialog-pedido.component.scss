@@ -1,0 +1,80 @@
+$color-primario: #3f51b5; // Azul estilo Material
+$color-texto: #333333;
+$borde-input: #cccccc;
+
+.modal-producto {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  padding: 10px;
+
+  h2 {
+    margin-top: 0;
+    color: $color-texto;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .campo-formulario {
+    margin-bottom: 16px;
+
+    label {
+      display: block; // Pone el label justo encima del input
+      font-size: 14px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid $borde-input;
+      border-radius: 4px; // Bordes redondeados
+      font-size: 15px;
+      box-sizing: border-box; // Evita que el padding rompa el ancho del 100%
+      transition: all 0.3s ease;
+
+      // Efecto cuando el usuario hace clic para escribir
+      &:focus {
+        outline: none;
+        border-color: $color-primario;
+        box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+      }
+    }
+  }
+
+  .acciones {
+    display: flex;
+    justify-content: flex-end; // Empuja los botones a la derecha
+    gap: 12px; // Separación entre los dos botones
+    margin-top: 30px;
+
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &.btn-cancelar {
+        background-color: transparent;
+        color: #666;
+        
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+
+      &.btn-guardar {
+        background-color: $color-primario;
+        color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+        &:hover {
+          background-color: darken($color-primario, 10%); // Oscurece el azul al pasar el ratón
+        }
+      }
+    }
+  }
+}
